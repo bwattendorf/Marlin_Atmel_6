@@ -41,9 +41,9 @@
 // 70 = Megatronics
 // 90 = Alpha OMCA board
 // 91 = Final OMCA board
-
+// 92 = 32 AVR 32 demo board
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 7
+#define MOTHERBOARD 92
 #endif
 
 

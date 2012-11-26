@@ -1216,6 +1216,76 @@
 #endif
 
 
+#if MOTHERBOARD == 92  // 32 Bit AVR EVK 1100 demo board 
+// I still need to edit the pins for the EVK1100
+#define KNOWN_BOARD 1
+
+#if !defined(__AVR_ATmega644P__) && !defined(__AVR_ATmega644__)
+#error Oops!  Make sure you have 'Sanguino' selected from the 'Tools -> Boards' menu. (Final OMCA board)
+#endif
+
+#define X_STEP_PIN         26
+#define X_DIR_PIN          25
+#define X_ENABLE_PIN       10
+#define X_MIN_PIN          0
+#define X_MAX_PIN          -1
+
+#define Y_STEP_PIN         28
+#define Y_DIR_PIN          27
+#define Y_ENABLE_PIN       10
+#define Y_MIN_PIN          1
+#define Y_MAX_PIN          -1
+
+#define Z_STEP_PIN         23
+#define Z_DIR_PIN          22
+#define Z_ENABLE_PIN       10
+#define Z_MIN_PIN          2
+#define Z_MAX_PIN          -1
+
+#define E0_STEP_PIN         24
+#define E0_DIR_PIN          21
+#define E0_ENABLE_PIN       10
+
+/* future proofing */
+#define __FS	20
+#define __FD	19
+#define __GS	18
+#define __GD	13
+
+#define UNUSED_PWM           14	/* PWM on LEFT connector */
+
+#define E1_STEP_PIN         -1 // 21
+#define E1_DIR_PIN          -1 // 20
+#define E1_ENABLE_PIN       -1 // 19
+
+#define E2_STEP_PIN         -1 // 21
+#define E2_DIR_PIN          -1 // 20
+#define E2_ENABLE_PIN       -1 // 18
+
+#define SDPOWER            -1
+#define SDSS               11
+#define SDCARDDETECT       -1 // 10 optional also used as mode pin
+#define LED_PIN            -1
+#define FAN_PIN            14 /* PWM on MIDDLE connector */
+#define PS_ON_PIN          -1
+#define KILL_PIN           -1
+
+#define HEATER_0_PIN        3 /*DONE PWM on RIGHT connector */
+#define HEATER_1_PIN       -1
+#define HEATER_2_PIN       -1
+#define HEATER_1_PIN       -1
+#define HEATER_2_PIN       -1
+#define TEMP_0_PIN          0 // ANALOG INPUT NUMBERING
+#define TEMP_1_PIN          1 // ANALOG
+#define TEMP_2_PIN         -1 // 2
+#define HEATER_BED_PIN      4
+#define TEMP_BED_PIN        2 // 1,2 or I2C
+
+#define I2C_SCL				16
+#define I2C_SDA				17
+
+#endif
+
 /****************************************************************************************
 * MegaTronics
 *
